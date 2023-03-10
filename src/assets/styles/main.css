@@ -1,0 +1,22 @@
+#app {
+    margin: 0 auto;
+    background-color: var(--red);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #app::after {
+    content: url(/public/icons/grid.svg);
+    height: 100vh;
+    position: fixed;
+    left: -5%;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "IBM Plex Mono", sans-serif, "Inter", sans-serif;
+  }
