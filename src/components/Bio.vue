@@ -43,8 +43,9 @@ const arrow = ref(Arrow);
 .bio {
   width: 582px;
   height: 339px;
-  top: 194px;
-  left: 168px;
+  top: 135px;
+  left: 85px;
+  position: absolute;
 
   &_title {
     margin: 0;
@@ -143,8 +144,6 @@ const arrow = ref(Arrow);
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-
-    
   }
 
   .bio_social {
@@ -185,8 +184,8 @@ const arrow = ref(Arrow);
   }
 
   &_country {
-      font-weight: 700;
-      font-size: 12px;
-    }
+    font-weight: 700;
+    font-size: 12px;
+  }
 }
 </style>

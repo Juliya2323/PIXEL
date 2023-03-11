@@ -3,6 +3,7 @@
   img.window_img(:src="bg")
   the-header
   bio
+  player
 </template>
 
 <script setup>
@@ -11,6 +12,7 @@ import { ref } from "vue";
 import TheHeader from "../layout/TheHeader.vue";
 import Background from "/public/images/bg.png";
 import Bio from '../components/Bio.vue'
+import Player from '../components/Player.vue'
 const bg = ref(Background);
 </script>
 
