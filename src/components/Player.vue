@@ -6,7 +6,7 @@ tab.player
     img.player_icon(:src="play")
   template(v-slot:content)
     .player_content
-      img.player_img(:src="songImg" alt="")
+      img.player_img(:src="songImg" alt="song image")
       .player_wrapper
 </template>
 

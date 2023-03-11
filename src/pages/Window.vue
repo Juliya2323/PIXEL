@@ -7,6 +7,7 @@
   music
   articles
   projects
+  gallery
 </template>
 
 <script setup>
@@ -19,6 +20,7 @@ import Player from "../components/Player.vue";
 import Music from "../components/Music.vue";
 import Articles from "../components/Articles.vue";
 import Projects from "../components/Projects.vue";
+import Gallery from '../components/Gallery.vue'
 
 const bg = ref(Background);
 </script>

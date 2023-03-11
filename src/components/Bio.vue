@@ -1,28 +1,28 @@
 <template lang="pug">
 tab.bio
-    template(v-slot:info)
-      h3.bio_title BIO.DMG
-    template(v-slot:icon)
-      img.bio_icon(:src="account")
-    template(v-slot:content)
-      .bio_content
-        .bio_main 
-          .bio_photo 
-            img.bio_img(:src="photo" alt="Photo")
-          .bio_info
-            .bio_info_title 
-              .bio_info_name Yuliya Poznyak
-              .bio_info_gender SHE/HER
-            .bio_info_subtitle Frontend Developer 
-            .bio_info_description I love to read and spend time doing outside activities like camping, playing outdoor sports, hiking, and web development.
-        .bio_additional
-          .bio_social
-            p.bio_social_text Social Links:
-            a.bio_social_link(href="https://github.com/Juliya2323" target="_blank")
-              img.bio_social_link_icon(:src="git", alt="GitHub")
-              span.bio_social_link_name @Juliya2323
-              img.bio_social_link_arrow(:src="arrow", alt="GitHub")
-          span.bio_country BY
+  template(v-slot:info)
+    h3.bio_title BIO.DMG
+  template(v-slot:icon)
+    img.bio_icon(:src="account" alt="accont icon")
+  template(v-slot:content)
+    .bio_content
+      .bio_main 
+        .bio_photo 
+          img.bio_img(:src="photo" alt="Photo")
+        .bio_info
+          .bio_info_title 
+            .bio_info_name Yuliya Poznyak
+            .bio_info_gender SHE/HER
+          .bio_info_subtitle Frontend Developer 
+          .bio_info_description I love to read and spend time doing outside activities like camping, playing outdoor sports, hiking, and web development.
+      .bio_additional
+        .bio_social
+          p.bio_social_text Social Links:
+          a.bio_social_link(href="https://github.com/Juliya2323" target="_blank")
+            img.bio_social_link_icon(:src="git", alt="GitHub")
+            span.bio_social_link_name @Juliya2323
+            img.bio_social_link_arrow(:src="arrow", alt="GitHub")
+        span.bio_country BY
 </template>
 
 <script setup>
@@ -172,7 +172,7 @@ const arrow = ref(Arrow);
       }
 
       &_name {
-        font-weight: 400;
+        font-weight: 600;
         font-size: 12px;
       }
 
