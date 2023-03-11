@@ -4,6 +4,9 @@
   the-header
   bio
   player
+  music
+  articles
+  projects
 </template>
 
 <script setup>
@@ -11,8 +14,12 @@ import { ref } from "vue";
 
 import TheHeader from "../layout/TheHeader.vue";
 import Background from "/public/images/bg.png";
-import Bio from '../components/Bio.vue'
-import Player from '../components/Player.vue'
+import Bio from "../components/Bio.vue";
+import Player from "../components/Player.vue";
+import Music from "../components/Music.vue";
+import Articles from "../components/Articles.vue";
+import Projects from "../components/Projects.vue";
+
 const bg = ref(Background);
 </script>
 
