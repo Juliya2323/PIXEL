@@ -23,6 +23,7 @@ import Projects from "../components/Projects.vue";
 import Gallery from '../components/Gallery.vue'
 
 const bg = ref(Background);
+
 </script>
 
 <style lang="scss">
