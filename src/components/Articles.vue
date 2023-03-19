@@ -13,9 +13,6 @@ const articlesFolder = ref(Articles);
 
 <style scoped lang="scss">
 .articles {
-  top: 500px;
-  right: 100px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;

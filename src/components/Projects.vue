@@ -13,8 +13,6 @@ const projectsFolder = ref(Projects);
 
 <style scoped lang="scss">
 .projects {
-  
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;

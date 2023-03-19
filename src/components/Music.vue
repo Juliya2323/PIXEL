@@ -13,9 +13,6 @@ const musicFolder = ref(Music);
 
 <style scoped lang="scss">
 .music {
-  top: 400px;
-  right: 350px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;

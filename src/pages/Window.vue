@@ -2,18 +2,18 @@
 .window
   img.window_img(:src="bg")
   the-header
-  bio
-  player
-  folder
+  bio.bio
+  player.player
+  folder.music
     template(v-slot:default)
       music
-  folder
+  folder.articles
     template(v-slot:default)
       articles
-  folder
+  folder.projects
     template(v-slot:default)
       projects
-  gallery
+  gallery.gallery
 </template>
 
 <script setup>
@@ -81,5 +81,29 @@ const bg = ref(Background);
 
 .handle {
   cursor: move;
+}
+
+.music {
+  transform: translate(280%, 70%);
+}
+
+.articles {
+  transform: translate(280%, 200%);
+}
+
+.projects {
+  transform: translate(382%, 165%);
+}
+
+.bio {
+  transform: translate(10%, 35%);
+}
+
+.player {
+  transform: translate(45%, 370%);
+}
+
+.gallery {
+  transform: translate(210%, 40%);
 }
 </style>
