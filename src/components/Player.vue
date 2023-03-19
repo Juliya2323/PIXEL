@@ -45,18 +45,18 @@ const state = reactive({
   tracks: [
     {
       title: "Inspire",
-      src: "/public/music/song 1.mp3",
-      img: "/public/images/inspire.jpg",
+      src: "/music/song 1.mp3",
+      img: "/images/inspire.jpg",
     },
     {
       title: "Dreams",
-      src: "/public/music/song 2.mp3",
-      img: "/public/images/dreams.jpg",
+      src: "/music/song 2.mp3",
+      img: "/images/dreams.jpg",
     },
     {
       title: "Ukulele",
-      src: "/public/music/song 3.mp3",
-      img: "/public/images/ukulele.jpg",
+      src: "/music/song 3.mp3",
+      img: "/images/ukulele.jpg",
     },
   ],
   currentTrackIndex: 0,
