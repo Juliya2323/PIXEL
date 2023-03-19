@@ -9,8 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.8",
     "@vuepic/vue-datepicker": "^4.2.0",
+    "draggable": "^4.2.0",
     "pug": "^3.0.2",
+    "sortablejs": "^1.15.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {

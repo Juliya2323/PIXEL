@@ -45,7 +45,6 @@ const arrow = ref(Arrow);
   height: 339px;
   top: 135px;
   left: 85px;
-  position: absolute;
 
   &_title {
     margin: 0;
@@ -132,7 +131,7 @@ const arrow = ref(Arrow);
   }
 
   &_additional {
-    height: 25%;
+    height: 70px;
     background: repeating-linear-gradient(
         transparent,
         transparent 30px,

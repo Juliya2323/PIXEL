@@ -1,17 +1,23 @@
 <template lang="pug">
-.window    
+.window
   img.window_img(:src="bg")
   the-header
   bio
   player
-  music
-  articles
-  projects
+  folder
+    template(v-slot:default)
+      music
+  folder
+    template(v-slot:default)
+      articles
+  folder
+    template(v-slot:default)
+      projects
   gallery
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 import TheHeader from "../layout/TheHeader.vue";
 import Background from "/public/images/bg.png";
@@ -21,6 +27,7 @@ import Music from "../components/Music.vue";
 import Articles from "../components/Articles.vue";
 import Projects from "../components/Projects.vue";
 import Gallery from '../components/Gallery.vue'
+import Folder from '../components/Folder.vue'
 
 const bg = ref(Background);
 
@@ -64,5 +71,15 @@ const bg = ref(Background);
     height: 100%;
     width: auto;
   }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.handle {
+  cursor: move;
 }
 </style>

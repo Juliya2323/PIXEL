@@ -13,7 +13,6 @@ const articlesFolder = ref(Articles);
 
 <style scoped lang="scss">
 .articles {
-  position: absolute;
   top: 500px;
   right: 100px;
   cursor: pointer;

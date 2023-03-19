@@ -22,7 +22,6 @@ const gallery = ref(Gallery)
   height: 280px;
   bottom: 20px;
   left: 385px;
-  position: absolute;
   z-index: 5;
 
   &_title {
@@ -40,7 +39,7 @@ const gallery = ref(Gallery)
 
   &_content {
     background-image: url('/public/icons/bg2.svg');
-    height: 100%;
+    height: 300px;
     padding-top: 27px;
     box-sizing: border-box;
   }

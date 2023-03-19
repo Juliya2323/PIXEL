@@ -13,7 +13,6 @@ const musicFolder = ref(Music);
 
 <style scoped lang="scss">
 .music {
-  position: absolute;
   top: 400px;
   right: 350px;
   cursor: pointer;

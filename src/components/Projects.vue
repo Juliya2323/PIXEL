@@ -13,9 +13,7 @@ const projectsFolder = ref(Projects);
 
 <style scoped lang="scss">
 .projects {
-  position: absolute;
-  top: 600px;
-  right: 255px;
+  
   cursor: pointer;
   display: flex;
   flex-direction: column;
