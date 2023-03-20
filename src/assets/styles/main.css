@@ -19,4 +19,5 @@
   body {
     margin: 0;
     font-family: "IBM Plex Mono", sans-serif, "Inter", sans-serif;
+    cursor: url('/public/icons/cursor.svg'), auto;
   }

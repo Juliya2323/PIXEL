@@ -1,5 +1,6 @@
 <template lang="pug">
 window
+tetikus 
 </template>
 
 <script setup>
