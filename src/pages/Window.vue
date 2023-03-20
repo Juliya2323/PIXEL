@@ -42,6 +42,7 @@ const bg = ref(Background);
   border: 6px solid black;
   z-index: 5;
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";
