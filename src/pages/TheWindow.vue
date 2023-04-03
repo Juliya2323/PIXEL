@@ -5,13 +5,13 @@
   the-header
   bio.bio
   player.player
-  folder.music
+  base-folder.music
     template(v-slot:default)
       music
-  folder.articles
+  base-folder.articles
     template(v-slot:default)
       articles
-  folder.projects
+  base-folder.projects
     template(v-slot:default)
       projects
   gallery.gallery
@@ -29,7 +29,7 @@ import Music from "../components/Music.vue";
 import Articles from "../components/Articles.vue";
 import Projects from "../components/Projects.vue";
 import Gallery from "../components/Gallery.vue";
-import Folder from "../components/Folder.vue";
+import BaseFolder from "../ui/BaseFolder.vue";
 </script>
 
 <style lang="scss">

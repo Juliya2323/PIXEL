@@ -1,10 +1,10 @@
 <template lang="pug">
-window
+the-window
 tetikus 
 </template>
 
 <script setup>
-import Window from './pages/Window.vue'
+import TheWindow from './pages/TheWindow.vue'
 </script>
 
 <style scoped>

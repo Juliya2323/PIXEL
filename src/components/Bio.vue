@@ -1,5 +1,5 @@
 <template lang="pug">
-tab.bio
+base-tab.bio
   template(v-slot:info)
     h3.bio_title BIO.DMG
   template(v-slot:icon)
@@ -27,7 +27,7 @@ tab.bio
 
 <script setup>
 import { ref } from "vue";
-import Tab from "../components/Tab.vue";
+import BaseTab from "../ui/BaseTab.vue";
 import Account from "/icons/acc.svg";
 import Photo from "/images/photo.jpg";
 import Git from "/icons/github.svg";

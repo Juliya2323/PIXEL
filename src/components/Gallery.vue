@@ -1,5 +1,5 @@
 <template lang="pug">
-tab.gallery
+base-tab.gallery
   template(v-slot:info)
     h3.gallery_title KOREAN.BBQ
   template(v-slot:icon)
@@ -10,7 +10,7 @@ tab.gallery
 
 <script setup>
 import {ref} from 'vue'
-import Tab from '../components/Tab.vue'
+import BaseTab from '../ui/BaseTab.vue'
 import Gallery from '/icons/gallery.svg'
 </script>
 

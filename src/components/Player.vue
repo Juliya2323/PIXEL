@@ -1,5 +1,5 @@
 <template lang="pug">
-tab.player
+base-tab.player
   template(v-slot:info)
     h3.player_title SONG I HEAR ALL THE TIME
   template(v-slot:icon)
@@ -29,7 +29,7 @@ tab.player
 
 <script setup>
 import { reactive, toRefs, computed, onMounted, ref } from "vue";
-import Tab from "../components/Tab.vue";
+import BaseTab from "../ui/BaseTab.vue";
 import PlayIcon from "/icons/play.svg";
 import Next from "/icons/next.svg";
 import Prev from "/icons/prev.svg";
