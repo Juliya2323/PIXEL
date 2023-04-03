@@ -2,17 +2,74 @@
 .draggable(:style="{ left: x + 'px', top: y + 'px' }" @mousedown="startDrag")
   .tab
     header.tab_header
-      button.tab_header_options 
-        //img.tab_header_img(:src='options')
-        img.tab_header_img(:scr="Close" alt="close")
-      slot(name='info')
       slot(name='icon') 
+      slot(name='info')
+      button.tab_header_options 
+        img.tab_header_img(:src='close')
     slot(name='content')
 </template>
 
+<!-- <script>
+import { ref } from "vue";
+import Close from "/icons/close.svg"
+
+export default {
+  data() {
+    return {
+      close: Close
+    };
+  },
+  setup() {
+    const x = ref(0);
+    const y = ref(0);
+    let mouseX = 0;
+    let mouseY = 0;
+    let isDragging = false;
+
+    const startDrag = (event) => {
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+      isDragging = true;
+    };
+
+    const handleDrag = (event) => {
+      if (isDragging) {
+        const deltaX = event.clientX - mouseX;
+        const deltaY = event.clientY - mouseY;
+        x.value += deltaX;
+        y.value += deltaY;
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+      }
+    };
+
+    const stopDrag = () => {
+      isDragging = false;
+    };
+
+    return {
+      x,
+      y,
+      startDrag,
+      handleDrag,
+      stopDrag,
+    };
+  },
+
+  mounted() {
+    document.addEventListener("mousemove", this.handleDrag);
+    document.addEventListener("mouseup", this.stopDrag);
+  },
+
+  beforeUnmount() {
+    document.removeEventListener("mousemove", this.handleDrag);
+    document.removeEventListener("mouseup", this.stopDrag);
+  },
+};
+</script> -->
+
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import Options from "/icons/options.svg";
 import Close from "/icons/close.svg";
 
 const x = ref(0);
@@ -41,6 +98,8 @@ const handleDrag = (event) => {
 const stopDrag = () => {
   isDragging = false;
 };
+
+const close = Close;
 
 onMounted(() => {
   document.addEventListener("mousemove", handleDrag);
@@ -85,7 +144,6 @@ onBeforeUnmount(() => {
 
     &_img {
       height: 14px;
-      width: 58px;
     }
   }
 
