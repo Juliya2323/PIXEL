@@ -10,7 +10,7 @@
   }
 
   #app::after {
-    content: url(/public/icons/grid.svg);
+    content: url(/icons/grid.svg);
     height: 100vh;
     position: fixed;
     left: -5%;
@@ -19,5 +19,5 @@
   body {
     margin: 0;
     font-family: "IBM Plex Mono", sans-serif, "Inter", sans-serif;
-    cursor: url('/public/icons/cursor.svg'), auto;
+    cursor: url('/icons/cursor.svg'), auto;
   }

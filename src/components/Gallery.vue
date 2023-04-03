@@ -36,7 +36,7 @@ import Gallery from '/icons/gallery.svg'
   }
 
   &_content {
-    background-image: url('/public/icons/bg2.svg');
+    background-image: url('/icons/bg2.svg');
     height: 300px;
     padding-top: 27px;
     box-sizing: border-box;

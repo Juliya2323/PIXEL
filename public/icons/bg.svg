@@ -10,7 +10,7 @@
 <g clip-path="url(#clip2_319_18708)">
 <rect width="310" height="310" transform="translate(0 620)" fill="#4D7BFF"/>
 <g filter="url(#filter0_d_319_18708)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M202.008 723.316C230.824 723.316 254.183 699.957 254.183 671.142C254.183 642.326 230.824 618.967 202.008 618.967C173.193 618.967 149.833 642.326 149.833 671.142C149.833 699.957 173.193 723.316 202.008 723.316ZM206.666 827.669H309.839V733.754H229.835V804.193C229.835 817.057 219.49 827.504 206.666 827.669ZM149.834 827.67H233.314V932.02H149.834V827.67Z" fill="#FF5C5C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M309.839 827.669H206.666C219.49 827.504 229.835 817.057 229.835 804.193V733.754H309.839V827.669ZM233.313 827.67H149.833V932.02H233.313V827.67Z" fill="#FF5C5C"/>
 </g>
 </g>
 <g filter="url(#filter1_d_319_18708)">
@@ -29,7 +29,7 @@
 <path d="M155.71 0H222.443V88.5714H155.71C137.322 88.5714 121.602 95.0667 108.552 108.057C95.5023 121.048 88.9773 136.695 88.9773 155C88.9773 173.305 95.5023 188.952 108.552 201.943C121.602 214.933 137.322 221.429 155.71 221.429H222.443V310H155.71C112.705 310 76.0015 294.869 45.6009 264.607C15.2003 234.345 0 197.81 0 155C0 112.19 15.2003 75.6548 45.6009 45.3929C76.0015 15.131 112.705 0 155.71 0Z" fill="#4D7BFF"/>
 </g>
 <defs>
-<filter id="filter0_d_319_18708" x="145.833" y="618.967" width="168.006" height="321.054" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_319_18708" x="145.833" y="733.754" width="168.005" height="206.266" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
