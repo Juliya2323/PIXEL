@@ -11,7 +11,7 @@
 
 <script>
 import { ref } from "vue";
-import Options from "/public/icons/options.svg";
+import Options from "/icons/options.svg";
 
 export default {
   data() {

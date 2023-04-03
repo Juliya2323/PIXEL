@@ -1,6 +1,6 @@
 <template lang="pug">
 .window
-  img.window_img(:src="bg")
+  img.window_img(:src="Background")
   the-header
   bio.bio
   player.player
@@ -17,20 +17,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 import TheHeader from "../layout/TheHeader.vue";
-import Background from "/public/images/bg.png";
+import Background from "/images/bg.png";
 import Bio from "../components/Bio.vue";
 import Player from "../components/Player.vue";
 import Music from "../components/Music.vue";
 import Articles from "../components/Articles.vue";
 import Projects from "../components/Projects.vue";
-import Gallery from '../components/Gallery.vue'
-import Folder from '../components/Folder.vue'
-
-const bg = ref(Background);
-
+import Gallery from "../components/Gallery.vue";
+import Folder from "../components/Folder.vue";
 </script>
 
 <style lang="scss">

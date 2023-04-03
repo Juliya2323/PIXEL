@@ -1,7 +1,6 @@
 <template lang="pug">
 .draggable(:style="{ left: x + 'px', top: y + 'px' }" @mousedown="startDrag")
-  .folder_wrapper
-    slot
+  slot
 </template>
 
 <script>

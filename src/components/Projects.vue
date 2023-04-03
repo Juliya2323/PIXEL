@@ -1,14 +1,12 @@
 <template lang="pug">
 .projects
-  img.projects_img(:src="projectsFolder", alt="projects folder")
+  img.projects_img(:src="Projects", alt="projects folder" draggable="false")
   h2.projects_title Projects
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Projects from "/public/icons/pinkFolder.svg";
-
-const projectsFolder = ref(Projects);
+import Projects from "/icons/pinkFolder.svg";
 </script>
 
 <style scoped lang="scss">

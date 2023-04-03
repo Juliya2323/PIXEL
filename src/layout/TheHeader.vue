@@ -2,21 +2,18 @@
 header.header
   .header_nav 
     .header_logo 
-       img.header_logo_img(:src="logo", alt="logo")
+       img.header_logo_img(:src="Logo", alt="logo")
        h1.header_logo_text FIGMA.OS
     span.header_description CONFIG *** LIVE FROM SM ***
   .header_info
     time.header_date {{ utc }}
-    img.header_icon(:src="globe")
+    img.header_icon(:src="Globe")
 </template>
 
 <script setup>
 import {ref} from 'vue'
-import Logo from '/public/icons/figma.svg'
-import Globe from '/public/icons/globe.svg'
-
-const logo = ref(Logo)
-const globe = ref(Globe)
+import Logo from '/icons/figma.svg'
+import Globe from '/icons/globe.svg'
 
 const date = ref(new Date())
 const utc = date.value.toUTCString()

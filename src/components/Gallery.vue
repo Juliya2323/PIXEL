@@ -3,7 +3,7 @@ tab.gallery
   template(v-slot:info)
     h3.gallery_title KOREAN.BBQ
   template(v-slot:icon)
-    img.gallery_icon(:src="gallery" alt="gallery icon")
+    img.gallery_icon(:src="Gallery" alt="gallery icon" draggable="false")
   template(v-slot:content)
     .gallery_content
 </template>
@@ -11,9 +11,7 @@ tab.gallery
 <script setup>
 import {ref} from 'vue'
 import Tab from '../components/Tab.vue'
-import Gallery from '/public/icons/gallery.svg'
-
-const gallery = ref(Gallery)
+import Gallery from '/icons/gallery.svg'
 </script>
 
 <style scoped lang="scss">

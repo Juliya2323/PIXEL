@@ -1,14 +1,13 @@
 <template lang="pug">
 .articles 
-  img.articles_img(:src="articlesFolder", alt="articles folder")
+  img.articles_img(:src="Articles", alt="articles folder" draggable="false")
   h2.articles_title Articles
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Articles from "/public/icons/blueFolder.svg";
+import Articles from "/icons/blueFolder.svg";
 
-const articlesFolder = ref(Articles);
 </script>
 
 <style scoped lang="scss">

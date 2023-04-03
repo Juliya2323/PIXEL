@@ -3,12 +3,12 @@ tab.bio
   template(v-slot:info)
     h3.bio_title BIO.DMG
   template(v-slot:icon)
-    img.bio_icon(:src="account" alt="accont icon")
+    img.bio_icon(:src="Account" alt="accont icon")
   template(v-slot:content)
     .bio_content
       .bio_main 
         .bio_photo 
-          img.bio_img(:src="photo" alt="Photo")
+          img.bio_img(:src="Photo" alt="Photo")
         .bio_info
           .bio_info_title 
             .bio_info_name Yuliya Poznyak
@@ -19,24 +19,20 @@ tab.bio
         .bio_social
           p.bio_social_text Social Links:
           a.bio_social_link(href="https://github.com/Juliya2323" target="_blank")
-            img.bio_social_link_icon(:src="git", alt="GitHub")
+            img.bio_social_link_icon(:src="Git", alt="GitHub")
             span.bio_social_link_name @Juliya2323
-            img.bio_social_link_arrow(:src="arrow", alt="GitHub")
+            img.bio_social_link_arrow(:src="Arrow", alt="GitHub")
         span.bio_country BY
 </template>
 
 <script setup>
 import { ref } from "vue";
 import Tab from "../components/Tab.vue";
-import Account from "/public/icons/acc.svg";
-import Photo from "/public/images/photo.jpg";
-import Git from "/public/icons/github.svg";
-import Arrow from "/public/icons/arrow.svg";
+import Account from "/icons/acc.svg";
+import Photo from "/images/photo.jpg";
+import Git from "/icons/github.svg";
+import Arrow from "/icons/arrow.svg";
 
-const account = ref(Account);
-const photo = ref(Photo);
-const git = ref(Git);
-const arrow = ref(Arrow);
 </script>
 
 <style scoped lang="scss">

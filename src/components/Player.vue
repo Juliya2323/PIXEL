@@ -3,7 +3,7 @@ tab.player
   template(v-slot:info)
     h3.player_title SONG I HEAR ALL THE TIME
   template(v-slot:icon)
-    img.player_icon(:src="playIcon")
+    img.player_icon(:src="PlayIcon")
   template(v-slot:content)
     .player_content
       img.player_img(:src="currentTrack.img")
@@ -17,28 +17,23 @@ tab.player
           h3.player_song_name  {{ currentTrack.title }}
         .player_controls
           button.player_button(@click="prevTrack") 
-            img.player_button_img(:src="prev")
+            img.player_button_img(:src="Prev")
           button.player_button(@click="togglePlay") 
-            img.player_button_img(:src="pauseImg")
+            img.player_button_img(:src="PauseImg")
           button.player_button(@click="nextTrack") 
-            img.player_button_img(:src="next")
+            img.player_button_img(:src="Next")
         audio(ref="audioPlayer" :src="currentTrack.src" @ended="nextTrack")
 </template>
 
 <script setup>
 import { reactive, toRefs, computed, onMounted, ref } from "vue";
 import Tab from "../components/Tab.vue";
-import PlayIcon from "/public/icons/play.svg";
-import Next from "/public/icons/next.svg";
-import Prev from "/public/icons/prev.svg";
-import PauseImg from "/public/icons/pause.svg";
-import Star from "/public/icons/star.svg";
+import PlayIcon from "/icons/play.svg";
+import Next from "/icons/next.svg";
+import Prev from "/icons/prev.svg";
+import PauseImg from "/icons/pause.svg";
+import Star from "/icons/star.svg";
 
-const playIcon = ref(PlayIcon);
-const next = ref(Next);
-const prev = ref(Prev);
-const pauseImg = ref(PauseImg);
-const star = ref(Star);
 const starIsSelected = ref(false);
 
 const state = reactive({
