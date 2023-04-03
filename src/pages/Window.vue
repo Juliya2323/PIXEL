@@ -20,7 +20,7 @@
 import { ref } from "vue";
 
 import TheHeader from "../layout/TheHeader.vue";
-import Background from "/images/bg.png";
+import Background from "/icons/bg.svg";
 import Bio from "../components/Bio.vue";
 import Player from "../components/Player.vue";
 import Music from "../components/Music.vue";
