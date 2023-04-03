@@ -1,6 +1,7 @@
 <template lang="pug">
 .window
   img.window_img(:src="Background")
+  img.window_ellipse(:src="Ellipse")
   the-header
   bio.bio
   player.player
@@ -17,10 +18,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 import TheHeader from "../layout/TheHeader.vue";
 import Background from "/icons/bg.svg";
+import Ellipse from "/icons/ellipse.svg";
 import Bio from "../components/Bio.vue";
 import Player from "../components/Player.vue";
 import Music from "../components/Music.vue";
@@ -68,6 +70,24 @@ import Folder from "../components/Folder.vue";
     top: 0;
     height: 100%;
     width: auto;
+  }
+
+  &_ellipse {
+    position: absolute;
+    left: 70px;
+    bottom: 150px;
+    animation: move 3s linear infinite;
+
+    @keyframes move {
+      from {
+        transform: translateY(-50px);
+        scale: 1;
+      }
+      to {
+        transform: translateY(0);
+        scale: 0.7;
+      }
+    }
   }
 }
 

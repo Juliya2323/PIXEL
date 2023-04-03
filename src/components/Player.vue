@@ -18,8 +18,10 @@ tab.player
         .player_controls
           button.player_button(@click="prevTrack") 
             img.player_button_img(:src="Prev")
-          button.player_button(@click="togglePlay") 
-            img.player_button_img(:src="PauseImg")
+          button.player_button(@click="togglePlay" v-if="state.isPlaying") 
+            img.player_button_img(:src="PauseMode")
+          button.player_button(@click="togglePlay" v-if="!state.isPlaying")  
+            img.player_button_img(:src="PlayMode")
           button.player_button(@click="nextTrack") 
             img.player_button_img(:src="Next")
         audio(ref="audioPlayer" :src="currentTrack.src" @ended="nextTrack")
@@ -31,7 +33,8 @@ import Tab from "../components/Tab.vue";
 import PlayIcon from "/icons/play.svg";
 import Next from "/icons/next.svg";
 import Prev from "/icons/prev.svg";
-import PauseImg from "/icons/pause.svg";
+import PauseMode from "/icons/pauseMode.svg";
+import PlayMode from "/icons/playMode.svg"
 import Star from "/icons/star.svg";
 
 const starIsSelected = ref(false);
@@ -64,11 +67,13 @@ const currentTrack = computed(() => state.tracks[state.currentTrackIndex]);
 
 function play() {
   state.isPlaying = true;
+  console.log(state.isPlaying);
   audioPlayer.value.play();
 }
 
 function pause() {
   state.isPlaying = false;
+  console.log(state.isPlaying);
   audioPlayer.value.pause();
 }
 
