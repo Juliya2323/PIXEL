@@ -3,69 +3,54 @@
   .tab
     header.tab_header
       button.tab_header_options 
-        img.tab_header_img(:src='options')
+        //img.tab_header_img(:src='options')
+        img.tab_header_img(:scr="Close" alt="close")
       slot(name='info')
       slot(name='icon') 
     slot(name='content')
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import Options from "/icons/options.svg";
+import Close from "/icons/close.svg";
 
-export default {
-  data() {
-    return {
-      options: Options,
-    };
-  },
-  setup() {
-    const x = ref(0);
-    const y = ref(0);
-    let mouseX = 0;
-    let mouseY = 0;
-    let isDragging = false;
+const x = ref(0);
+const y = ref(0);
+let mouseX = 0;
+let mouseY = 0;
+let isDragging = false;
 
-    const startDrag = (event) => {
-      mouseX = event.clientX;
-      mouseY = event.clientY;
-      isDragging = true;
-    };
-
-    const handleDrag = (event) => {
-      if (isDragging) {
-        const deltaX = event.clientX - mouseX;
-        const deltaY = event.clientY - mouseY;
-        x.value += deltaX;
-        y.value += deltaY;
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-      }
-    };
-
-    const stopDrag = () => {
-      isDragging = false;
-    };
-
-    return {
-      x,
-      y,
-      startDrag,
-      handleDrag,
-      stopDrag,
-    };
-  },
-
-  mounted() {
-    document.addEventListener("mousemove", this.handleDrag);
-    document.addEventListener("mouseup", this.stopDrag);
-  },
-
-  beforeUnmount() {
-    document.removeEventListener("mousemove", this.handleDrag);
-    document.removeEventListener("mouseup", this.stopDrag);
-  },
+const startDrag = (event) => {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+  isDragging = true;
 };
+
+const handleDrag = (event) => {
+  if (isDragging) {
+    const deltaX = event.clientX - mouseX;
+    const deltaY = event.clientY - mouseY;
+    x.value += deltaX;
+    y.value += deltaY;
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+  }
+};
+
+const stopDrag = () => {
+  isDragging = false;
+};
+
+onMounted(() => {
+  document.addEventListener("mousemove", handleDrag);
+  document.addEventListener("mouseup", stopDrag);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("mousemove", handleDrag);
+  document.removeEventListener("mouseup", stopDrag);
+});
 </script>
 
 <style lang="scss">
