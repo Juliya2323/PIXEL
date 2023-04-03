@@ -9,65 +9,6 @@
     slot(name='content')
 </template>
 
-<!-- <script>
-import { ref } from "vue";
-import Close from "/icons/close.svg"
-
-export default {
-  data() {
-    return {
-      close: Close
-    };
-  },
-  setup() {
-    const x = ref(0);
-    const y = ref(0);
-    let mouseX = 0;
-    let mouseY = 0;
-    let isDragging = false;
-
-    const startDrag = (event) => {
-      mouseX = event.clientX;
-      mouseY = event.clientY;
-      isDragging = true;
-    };
-
-    const handleDrag = (event) => {
-      if (isDragging) {
-        const deltaX = event.clientX - mouseX;
-        const deltaY = event.clientY - mouseY;
-        x.value += deltaX;
-        y.value += deltaY;
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-      }
-    };
-
-    const stopDrag = () => {
-      isDragging = false;
-    };
-
-    return {
-      x,
-      y,
-      startDrag,
-      handleDrag,
-      stopDrag,
-    };
-  },
-
-  mounted() {
-    document.addEventListener("mousemove", this.handleDrag);
-    document.addEventListener("mouseup", this.stopDrag);
-  },
-
-  beforeUnmount() {
-    document.removeEventListener("mousemove", this.handleDrag);
-    document.removeEventListener("mouseup", this.stopDrag);
-  },
-};
-</script> -->
-
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import Close from "/icons/close.svg";
@@ -131,7 +72,7 @@ onBeforeUnmount(() => {
     left: 0;
     display: flex;
     justify-content: space-between;
-    font-family: "IBM Plex Mono";
+    font-family: var(--font-ibm);
     font-weight: 400;
     z-index: 5;
 

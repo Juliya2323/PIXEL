@@ -8,7 +8,7 @@ tab.bio
     .bio_content
       .bio_main 
         .bio_photo 
-          img.bio_img(:src="Photo" alt="Photo")
+          img.bio_img(:src="Photo" alt="Photo" draggable="false")
         .bio_info
           .bio_info_title 
             .bio_info_name Yuliya Poznyak
@@ -85,7 +85,7 @@ import Arrow from "/icons/arrow.svg";
     justify-content: flex-start;
     align-items: center;
     gap: 24px;
-    font-family: "Inter";
+    font-family: var(--font-inter);
   }
 
   &_info {
@@ -107,7 +107,7 @@ import Arrow from "/icons/arrow.svg";
     }
 
     &_gender {
-      font-family: "IBM Plex Mono";
+      font-family: var(--font-ibm);
       font-weight: 400;
       font-size: 16px;
       line-height: 100%;
@@ -145,7 +145,7 @@ import Arrow from "/icons/arrow.svg";
     display: flex;
     gap: 20px;
     align-items: center;
-    font-family: "IBM Plex Mono";
+    font-family: var(--font-ibm);
 
     &_text {
       font-weight: 400;

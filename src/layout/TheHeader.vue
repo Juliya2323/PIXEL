@@ -31,7 +31,7 @@ const utc = date.value.toUTCString()
     left: 0;
     display: flex;
     justify-content: space-between;
-    font-family: 'IBM Plex Mono';
+    font-family: var(--font-ibm);
     font-weight: 400;
 
     &_nav {

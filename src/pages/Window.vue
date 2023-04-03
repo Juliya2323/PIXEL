@@ -75,17 +75,15 @@ import Folder from "../components/Folder.vue";
   &_ellipse {
     position: absolute;
     left: 70px;
-    bottom: 150px;
+    bottom: 140px;
     animation: move 3s linear infinite;
 
     @keyframes move {
       from {
-        transform: translateY(-50px);
-        scale: 1;
+        transform: rotate(90deg);
       }
       to {
-        transform: translateY(0);
-        scale: 0.7;
+        transform: rotate(0);
       }
     }
   }
